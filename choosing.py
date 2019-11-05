@@ -1,20 +1,10 @@
 import random
 import os
 
-'''
-Специально для Planet Express Team
-'''
-
-def cls():
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
-
-cls()
-print('\nМонетка 2.0 (С) Usu4lC0d3r')
-print('\nПоочередно вводи то, между чем выбрать')
-print('\nВведи 0, чтобы выбрать')
+print('''
+Монетка 2.0 | usu4lc0d3r (c)
+Вводи варианты, между которыми выбрать, один за другим
+Введи 0, чтобы сделать выбор''')
 
 choises = []
 while True:
@@ -25,11 +15,11 @@ while True:
         choises.append(b)
 
 if len(choises) == 0:
-    print('Ничего не введено. Пока!')
+    print('Ничего не введено. Всего доброго! :D')
     exit()
 else: 
-    choise = random.randint(1, len(choises))
+    choise = random.randint(0, len(choises) - 1)
     try:
-        print('Итааак, я выбираю: ', choises[choise])
+        print('Мой выбор: ', choises[choise])
     except IndexError:
         print('Выбрать из одного пункта невозможно. Совсем. Никак. Ибо выбор только один.')
