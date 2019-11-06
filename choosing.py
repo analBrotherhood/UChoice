@@ -1,25 +1,23 @@
 import random
-import os
 
-print('''
-Монетка 2.0 | usu4lc0d3r (c)
+print('''\nМонетка 2.0 | usu4lc0d3r (c)
 Вводи варианты, между которыми выбрать, один за другим
 Введи 0, чтобы сделать выбор''')
 
-choises = []
+choices = []
 while True:
     b = input('\nВвод: ')
     if b == '0':
         break
     else: 
-        choises.append(b)
+        choices.append(b)
 
-if len(choises) == 0:
+if len(choices) == 0:
     print('Ничего не введено. Всего доброго! :D')
     exit()
 else: 
-    choise = random.randint(0, len(choises) - 1)
+    choice = random.choice(choices)
     try:
-        print('Мой выбор: ', choises[choise])
+        print('Мой выбор: ', choice)
     except IndexError:
         print('Выбрать из одного пункта невозможно. Совсем. Никак. Ибо выбор только один.')
